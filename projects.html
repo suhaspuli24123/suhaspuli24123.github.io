@@ -4,113 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suhas Puli - Projects</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <h1><a href="index.html">Suhas Puli</a></h1>
+         <div class="container">
+            <nav>
+                <div class="logo">Suhas Puli</div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="visualization.html">Visualizations</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="visualization.html">Data Visualization</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="projects-intro">
+        <section class="page-header">
             <div class="container">
-                <h2>My Projects</h2>
-                <p>Below are the key projects I've worked on that demonstrate my skills in data analysis, machine learning, and visualization.</p>
+                <h1>My Projects</h1>
+                <p>A collection of my key projects demonstrating my skills in machine learning, data analysis, and algorithm implementation.</p>
             </div>
         </section>
 
-        <section class="projects-grid">
+        <section class="projects">
             <div class="container">
-                <!-- Real-Time AQI Project -->
-                <div class="project-card" id="real-time-aqi">
-                    <div class="project-image">
-                        <img src="images/aqi-project.jpg" alt="Real-Time AQI Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>Real-Time Air Quality Index</h3>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Data Analysis</span>
-                            <span>Machine Learning</span>
-                            <span>Visualization</span>
-                        </div>
-                        <p>Developed a system for real-time air quality monitoring and analysis. The project includes data collection from multiple sources, preprocessing, analysis using machine learning techniques, and visualization of pollution trends.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/suhaspuli24123/Real_Time_AQI" target="_blank" class="btn"><i class="fab fa-github"></i> View Code</a>
-                            <a href="visualization.html#aqi-visualization" class="btn"><i class="fas fa-chart-bar"></i> View Visualization</a>
+                 <div class="project-grid">
+                    <!-- Project 1: Shopping Behavior -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Unveiling Patterns in Shopping Behavior</h3>
+                            <div class="project-tags">
+                                <span class="tag">EDA</span>
+                                <span class="tag">PCA</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <p class="project-description">Executed a detailed Exploratory Data Analysis (EDA) on a dataset focused on consumer behavior and shopping habits. This involved utilizing Principal Component Analysis (PCA), a blend of Unsupervised and Supervised Learning Algorithms, and Statistical Inference techniques to extract insights into general customer purchasing trends.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/suhaspuli24123" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Employee Attrition Analysis -->
-                <div class="project-card" id="employee-attrition">
-                    <div class="project-image">
-                        <img src="images/attrition-project.jpg" alt="Employee Attrition Analysis">
-                    </div>
-                    <div class="project-content">
-                        <h3>Employee Attrition Analysis</h3>
-                        <div class="project-tags">
-                            <span>Data Analysis</span>
-                            <span>Machine Learning</span>
-                            <span>HR Analytics</span>
-                            <span>Predictive Modeling</span>
-                        </div>
-                        <p>Analyzed factors contributing to employee attrition using HR analytics data. Developed predictive models to identify at-risk employees and provided recommendations for improving retention.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/suhaspuli24123/employee-attrition" target="_blank" class="btn"><i class="fab fa-github"></i> View Code</a>
-                            <a href="visualization.html#attrition-visualization" class="btn"><i class="fas fa-chart-bar"></i> View Visualization</a>
+                    <!-- Project 2: SVM and K-Means -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>SVM and K-Means Clustering Algorithm from Scratch</h3>
+                            <div class="project-tags">
+                                <span class="tag">SVM</span>
+                                <span class="tag">K-Means</span>
+                                <span class="tag">Classification</span>
+                                <span class="tag">Clustering</span>
+                            </div>
+                            <p class="project-description">Implemented Support vector machine (SVM) with a linear kernel from scratch on the Diabetes dataset to classify patients. Additionally, implemented the K-means clustering algorithm from scratch on the MNIST dataset to cluster handwritten digits.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/suhaspuli24123" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Customer Segmentation Project -->
-                <div class="project-card" id="customer-segmentation">
-                    <div class="project-image">
-                        <img src="images/segmentation-project.jpg" alt="Customer Segmentation">
-                    </div>
-                    <div class="project-content">
-                        <h3>Customer Segmentation Analysis</h3>
-                        <div class="project-tags">
-                            <span>Clustering</span>
-                            <span>Market Analysis</span>
-                            <span>Python</span>
-                            <span>Business Intelligence</span>
-                        </div>
-                        <p>Applied clustering techniques to segment customers based on purchasing behavior. Created targeted marketing strategies for different customer segments to improve conversion rates and customer satisfaction.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/suhaspuli24123/customer-segmentation" target="_blank" class="btn"><i class="fab fa-github"></i> View Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Financial Market Analysis -->
-                <div class="project-card" id="financial-analysis">
-                    <div class="project-image">
-                        <img src="images/finance-project.jpg" alt="Financial Market Analysis">
-                    </div>
-                    <div class="project-content">
-                        <h3>Financial Market Trend Analysis</h3>
-                        <div class="project-tags">
-                            <span>Time Series Analysis</span>
-                            <span>Financial Data</span>
-                            <span>Forecasting</span>
-                            <span>Risk Assessment</span>
-                        </div>
-                        <p>Conducted time series analysis of financial market data to identify trends and patterns. Developed forecasting models to predict market movements and assess investment risks.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/suhaspuli24123/financial-analysis" target="_blank" class="btn"><i class="fab fa-github"></i> View Code</a>
+                    <!-- Project 3: Credit Card Fraud Detection -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Credit Card Fraud Detection</h3>
+                            <div class="project-tags">
+                                <span class="tag">Classification</span>
+                                <span class="tag">SMOTE</span>
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">FinTech</span>
+                            </div>
+                            <p class="project-description">Performed Exploratory Data Analysis and handled the problem of class imbalance using Undersampling and SMOTE techniques. Perfomed hyperparameter tuning and evaluated the performance of Logistic Regression, KNN, SVM, Decision tree, Random Forest, and XGBoost.</p>
+                             <div class="project-links">
+                                <a href="https://github.com/suhaspuli24123" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,14 +96,15 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="social-links">
+                <div class="footer-social">
                     <a href="https://github.com/suhaspuli24123" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/Suhas Reddy Puli" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:suhaspuli@iisc.ac.in"><i class="fas fa-envelope"></i></a>
                 </div>
                 <p>&copy; 2025 Suhas Puli. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
