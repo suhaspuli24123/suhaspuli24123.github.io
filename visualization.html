@@ -3,435 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Visualization - Suhas Puli</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Suhas Puli - Visualizations</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Suhas Puli</div>
+        <nav>
+            <div class="container">
+                <h1><a href="index.html">Suhas Puli</a></h1>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="visualization.html" class="active">Data Visualization</a></li>
+                    <li><a href="visualization.html" class="active">Visualizations</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Real-Time AQI Visualization</h1>
-            <p>Interactive data visualizations from the Real-Time Air Quality Index (AQI) project</p>
-        </div>
-    </section>
-
-    <section class="visualization-intro">
-        <div class="container">
-            <div class="viz-overview">
-                <h2>Project Overview</h2>
-                <p>
-                    This page showcases the data visualizations created from my Real-Time Air Quality Index (AQI) monitoring project. The visualizations demonstrate patterns, trends, and insights derived from air quality data collected from various monitoring stations across multiple cities.
-                </p>
-                <p>
-                    The project uses Python with libraries such as Matplotlib, Seaborn, and Plotly for creating interactive and informative visualizations that help understand air quality patterns, identify pollution hotspots, and analyze temporal trends.
-                </p>
-                <p>
-                    <strong>GitHub Repository:</strong>
-                    <a href="https://github.com/suhaspuli24123/Real_Time_AQI" target="_blank">
-                        https://github.com/suhaspuli24123/Real_Time_AQI
-                    </a>
-                </p>
+    <main>
+        <section class="visualization-intro">
+            <div class="container">
+                <h2>Data Visualizations</h2>
+                <p>Explore interactive data visualizations from my projects. These visualizations demonstrate my skills in data analysis, presentation, and interactive web development.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="visualizations">
-        <div class="container">
-            <h2 class="section-title">Key Visualizations</h2>
-            
-            <div class="viz-section">
-                <h3>AQI Trends Over Time</h3>
-                <div class="viz-container">
-                    <div class="viz-plot" id="time-series-plot"></div>
-                    <div class="viz-description">
-                        <p>
-                            This time-series visualization shows the daily average Air Quality Index (AQI) trends over a 6-month period. The plot reveals seasonal patterns and critical periods of high pollution levels, demonstrating how air quality fluctuates over time.
-                        </p>
-                        <p>
-                            Notable observations include higher pollution levels during winter months (likely due to increased heating and atmospheric conditions) and specific pollution events that correlate with known environmental incidents.
-                        </p>
-                        <div class="code-snippet">
-                            <h4>Python Code</h4>
-                            <pre><code>
-# Time series plot with Matplotlib
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
-
-# Load and prepare data
-aqi_data = pd.read_csv('aqi_daily_data.csv')
-aqi_data['date'] = pd.to_datetime(aqi_data['date'])
-
-# Create figure and plot time series
-plt.figure(figsize=(12, 6))
-plt.plot(aqi_data['date'], aqi_data['aqi_value'], marker='o', linestyle='-', color='#1e88e5')
-plt.axhline(y=100, color='r', linestyle='--', alpha=0.7, label='Unhealthy Threshold')
-
-# Add labels and formatting
-plt.title('Daily Average AQI Over Time', fontsize=16)
-plt.xlabel('Date', fontsize=12)
-plt.ylabel('AQI Value', fontsize=12)
-plt.grid(True, alpha=0.3)
-plt.legend()
-plt.tight_layout()
-
-# Save the figure
-plt.savefig('aqi_time_series.png', dpi=300, bbox_inches='tight')
-plt.show()
-                            </code></pre>
+        <section class="visualization-showcase">
+            <div class="container">
+                <div class="viz-item">
+                    <h3>Real-Time Air Quality Index Visualization</h3>
+                    <div class="viz-container" id="aqi-visualization">
+                        <!-- D3.js visualization will be inserted here -->
+                        <p>Interactive AQI visualization showing pollution levels across different locations.</p>
+                        <div class="placeholder-viz">
+                            <img src="images/aqi-placeholder.jpg" alt="AQI Visualization Placeholder">
+                            <p class="caption">Interactive visualization coming soon. This will display real-time air quality data from the Real-Time AQI project.</p>
                         </div>
+                    </div>
+                    <p>This visualization is part of my Real-Time Air Quality Index project, where I developed a system to collect, analyze, and visualize air quality data.</p>
+                    <a href="projects.html#real-time-aqi" class="btn">View Project Details</a>
+                </div>
+
+                <div class="viz-item">
+                    <h3>Employee Attrition Analysis</h3>
+                    <div class="viz-container" id="attrition-visualization">
+                        <!-- D3.js visualization will be inserted here -->
+                        <p>Visualization showing factors contributing to employee attrition.</p>
+                        <div class="placeholder-viz">
+                            <img src="images/attrition-placeholder.jpg" alt="Attrition Visualization Placeholder">
+                            <p class="caption">Interactive visualization coming soon. This will display insights from the Employee Attrition Analysis project.</p>
+                        </div>
+                    </div>
+                    <p>Part of my Employee Attrition Analysis project, this visualization helps identify key factors affecting employee retention.</p>
+                    <a href="projects.html#employee-attrition" class="btn">View Project Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="visualization-tools">
+            <div class="container">
+                <h2>Visualization Tools & Technologies</h2>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>D3.js</h3>
+                        <p>Creating interactive data visualizations for the web</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-python"></i>
+                        <h3>Matplotlib & Seaborn</h3>
+                        <p>Python libraries for static and interactive visualizations</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-table"></i>
+                        <h3>Tableau</h3>
+                        <p>Building interactive dashboards for business intelligence</p>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Power BI</h3>
+                        <p>Creating business analytics visualizations</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="viz-section">
-                <h3>Pollutant Concentration by Location</h3>
-                <div class="viz-container">
-                    <div class="viz-plot" id="bar-chart"></div>
-                    <div class="viz-description">
-                        <p>
-                            This bar chart compares the average concentration of different pollutants (PM2.5, PM10, NO2, SO2, CO, O3) across multiple monitoring stations. The visualization helps identify which pollutants are more prevalent in specific areas.
-                        </p>
-                        <p>
-                            The data indicates that urban areas show higher levels of NO2 and PM2.5, consistent with traffic-related pollution, while industrial zones show elevated levels of SO2 and PM10.
-                        </p>
-                        <div class="code-snippet">
-                            <h4>Python Code</h4>
-                            <pre><code>
-# Bar chart with Seaborn
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
-
-# Load and prepare data
-pollutant_data = pd.read_csv('pollutant_by_location.csv')
-
-# Create the bar chart
-plt.figure(figsize=(14, 8))
-chart = sns.barplot(
-    x='location', 
-    y='concentration', 
-    hue='pollutant',
-    palette='viridis',
-    data=pollutant_data
-)
-
-# Add labels and formatting
-chart.set_title('Average Pollutant Concentration by Location', fontsize=16)
-chart.set_xlabel('Monitoring Station Location', fontsize=12)
-chart.set_ylabel('Concentration (μg/m³)', fontsize=12)
-plt.xticks(rotation=45, ha='right')
-plt.legend(title='Pollutant')
-plt.tight_layout()
-
-# Save the figure
-plt.savefig('pollutant_bar_chart.png', dpi=300, bbox_inches='tight')
-plt.show()
-                            </code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="viz-section">
-                <h3>Correlation Heatmap of Pollutants</h3>
-                <div class="viz-container">
-                    <div class="viz-plot" id="heatmap"></div>
-                    <div class="viz-description">
-                        <p>
-                            This heatmap visualizes the correlation between different pollutants. Understanding these relationships helps identify common sources and can inform more targeted pollution control strategies.
-                        </p>
-                        <p>
-                            The heatmap reveals strong positive correlations between PM2.5 and PM10, suggesting common sources or formation mechanisms. Additionally, NO2 and CO show significant correlation, indicating traffic as a likely common source.
-                        </p>
-                        <div class="code-snippet">
-                            <h4>Python Code</h4>
-                            <pre><code>
-# Correlation heatmap with Seaborn
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
-
-# Load and prepare data
-pollutant_data = pd.read_csv('pollutants_daily.csv')
-
-# Calculate correlation matrix
-correlation = pollutant_data[['PM2.5', 'PM10', 'NO2', 'SO2', 'CO', 'O3']].corr()
-
-# Create the heatmap
-plt.figure(figsize=(10, 8))
-mask = np.triu(correlation)
-heatmap = sns.heatmap(
-    correlation,
-    annot=True,
-    cmap='coolwarm',
-    vmin=-1,
-    vmax=1,
-    mask=mask,
-    square=True,
-    linewidths=0.5,
-    cbar_kws={'shrink': 0.8}
-)
-
-# Add labels and formatting
-heatmap.set_title('Correlation Between Air Pollutants', fontsize=16, pad=20)
-plt.tight_layout()
-
-# Save the figure
-plt.savefig('pollutant_correlation_heatmap.png', dpi=300, bbox_inches='tight')
-plt.show()
-                            </code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="viz-section">
-                <h3>Geographic Distribution of AQI</h3>
-                <div class="viz-container">
-                    <div class="viz-plot" id="map-plot"></div>
-                    <div class="viz-description">
-                        <p>
-                            This interactive map visualization displays the geographic distribution of Air Quality Index (AQI) values across different monitoring stations. The map helps identify pollution hotspots and spatial patterns in air quality.
-                        </p>
-                        <p>
-                            The visualization clearly shows higher pollution levels in densely populated urban areas and around industrial zones, with cleaner air in suburban and peripheral regions.
-                        </p>
-                        <div class="code-snippet">
-                            <h4>Python Code</h4>
-                            <pre><code>
-# Interactive map with Plotly
-import plotly.express as px
-import pandas as pd
-
-# Load and prepare data
-geo_data = pd.read_csv('aqi_geo_data.csv')
-
-# Create the interactive map
-fig = px.scatter_mapbox(
-    geo_data,
-    lat='latitude',
-    lon='longitude',
-    color='aqi_value',
-    size='aqi_value',
-    color_continuous_scale=px.colors.sequential.Plasma,
-    size_max=15,
-    zoom=10,
-    mapbox_style='carto-positron',
-    hover_name='location',
-    hover_data={
-        'aqi_value': True,
-        'main_pollutant': True,
-        'latitude': False,
-        'longitude': False
-    },
-    title='Geographic Distribution of Air Quality Index'
-)
-
-# Update layout
-fig.update_layout(
-    margin={'r': 0, 't': 50, 'l': 0, 'b': 0},
-    coloraxis_colorbar={
-        'title': 'AQI Value',
-        'tickvals': [50, 100, 150, 200, 300],
-        'ticktext': ['Good', 'Moderate', 'Unhealthy for Sensitive Groups', 'Unhealthy', 'Very Unhealthy']
-    }
-)
-
-# Save as HTML file
-fig.write_html('aqi_map.html')
-
-# Show the plot
-fig.show()
-                            </code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="viz-conclusion">
-        <div class="container">
-            <h2>Conclusion & Future Work</h2>
-            <p>
-                The visualizations presented here offer valuable insights into air quality patterns and pollution dynamics. The analysis reveals temporal trends, spatial variations, and correlations between different pollutants that can inform policy decisions and public health interventions.
-            </p>
-            <p>
-                Future work on this project includes:
-            </p>
-            <ul>
-                <li>Integrating machine learning models for AQI prediction and anomaly detection</li>
-                <li>Developing more granular, neighborhood-level visualization capabilities</li>
-                <li>Creating an interactive dashboard for real-time monitoring and alerts</li>
-                <li>Incorporating weather data to analyze environmental factors affecting air quality</li>
-            </ul>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-social">
+                <div class="social-links">
                     <a href="https://github.com/suhaspuli24123" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/suhaspuli" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com/suhaspuli" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:contact@suhaspuli.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
                 </div>
                 <p>&copy; 2025 Suhas Puli. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script>
-        // Sample data for visualization placeholders
-        
-        // Time series plot
-        var timeData = {
-            x: Array.from({length: 180}, (_, i) => {
-                let date = new Date(2024, 0, 1);
-                date.setDate(date.getDate() + i);
-                return date;
-            }),
-            y: Array.from({length: 180}, () => Math.floor(Math.random() * 150) + 30),
-            mode: 'lines+markers',
-            line: {color: '#1e88e5', width: 2},
-            marker: {size: 4}
-        };
-        
-        var layout1 = {
-            title: 'Daily Average AQI Over Time',
-            xaxis: {title: 'Date'},
-            yaxis: {title: 'AQI Value'},
-            shapes: [{
-                type: 'line',
-                x0: timeData.x[0],
-                y0: 100,
-                x1: timeData.x[timeData.x.length-1],
-                y1: 100,
-                line: {
-                    color: 'red',
-                    width: 2,
-                    dash: 'dash'
-                }
-            }]
-        };
-        
-        Plotly.newPlot('time-series-plot', [timeData], layout1);
-        
-        // Bar chart
-        var locations = ['Downtown', 'Industrial Zone', 'Residential Area', 'Commercial District', 'Suburban'];
-        var pollutants = ['PM2.5', 'PM10', 'NO2', 'SO2', 'CO', 'O3'];
-        
-        var barData = [];
-        
-        pollutants.forEach(pollutant => {
-            barData.push({
-                x: locations,
-                y: locations.map(() => Math.floor(Math.random() * 80) + 20),
-                name: pollutant,
-                type: 'bar'
-            });
+        // D3.js visualization code would go here
+        // This is a placeholder for the future implementation
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded - D3 visualizations will be implemented here');
         });
-        
-        var layout2 = {
-            title: 'Average Pollutant Concentration by Location',
-            xaxis: {title: 'Location'},
-            yaxis: {title: 'Concentration (μg/m³)'},
-            barmode: 'group',
-            legend: {title: {text: 'Pollutant'}}
-        };
-        
-        Plotly.newPlot('bar-chart', barData, layout2);
-        
-        // Heatmap
-        var heatmapData = [{
-            z: [
-                [1.0, 0.8, 0.6, 0.3, 0.5, -0.2],
-                [0.8, 1.0, 0.7, 0.4, 0.4, -0.3],
-                [0.6, 0.7, 1.0, 0.5, 0.7, -0.1],
-                [0.3, 0.4, 0.5, 1.0, 0.3, -0.4],
-                [0.5, 0.4, 0.7, 0.3, 1.0, -0.2],
-                [-0.2, -0.3, -0.1, -0.4, -0.2, 1.0]
-            ],
-            x: pollutants,
-            y: pollutants,
-            type: 'heatmap',
-            colorscale: 'RdBu',
-            zmin: -1,
-            zmax: 1
-        }];
-        
-        var layout3 = {
-            title: 'Correlation Between Air Pollutants',
-            annotations: []
-        };
-        
-        for (let i = 0; i < pollutants.length; i++) {
-            for (let j = 0; j < pollutants.length; j++) {
-                layout3.annotations.push({
-                    xref: 'x',
-                    yref: 'y',
-                    x: pollutants[j],
-                    y: pollutants[i],
-                    text: heatmapData[0].z[i][j].toFixed(2),
-                    font: {
-                        color: Math.abs(heatmapData[0].z[i][j]) > 0.5 ? 'white' : 'black'
-                    },
-                    showarrow: false
-                });
-            }
-        }
-        
-        Plotly.newPlot('heatmap', heatmapData, layout3);
-        
-        // Map plot - basic placeholder (would be a real map with actual coordinates in production)
-        var mapData = [{
-            type: 'scatter',
-            mode: 'markers',
-            x: Array.from({length: 15}, () => Math.random() * 100),
-            y: Array.from({length: 15}, () => Math.random() * 100),
-            marker: {
-                size: Array.from({length: 15}, () => Math.floor(Math.random() * 150) + 50),
-                color: Array.from({length: 15}, () => Math.floor(Math.random() * 150) + 50),
-                colorscale: 'Plasma',
-                showscale: true,
-                colorbar: {
-                    title: 'AQI Value'
-                }
-            },
-            text: Array.from({length: 15}, (_, i) => `Location ${i+1}<br>AQI: ${Math.floor(Math.random() * 150) + 50}`)
-        }];
-        
-        var layout4 = {
-            title: 'Geographic Distribution of Air Quality Index',
-            xaxis: {title: 'Longitude', showgrid: false, zeroline: false},
-            yaxis: {title: 'Latitude', showgrid: false, zeroline: false},
-            hovermode: 'closest'
-        };
-        
-        Plotly.newPlot('map-plot', mapData, layout4);
     </script>
 </body>
 </html>
