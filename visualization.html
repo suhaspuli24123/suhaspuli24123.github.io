@@ -3,91 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suhas Puli - Visualizations</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Suhas Puli - AQI Visualization</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <h1><a href="index.html">Suhas Puli</a></h1>
+        <div class="container">
+            <nav>
+                <div class="logo">Suhas Puli</div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="visualization.html" class="active">Visualizations</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="visualization.html" class="active">Data Visualization</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-        </nav>
+                 <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="visualization-intro">
+        <section class="page-header">
             <div class="container">
-                <h2>Data Visualizations</h2>
-                <p>Explore interactive data visualizations from my projects. These visualizations demonstrate my skills in data analysis, presentation, and interactive web development.</p>
+                <h1>Real-Time Air Quality Index (AQI) Analysis</h1>
+                <p>An exploratory data analysis of AQI across 237 cities in India to uncover pollution trends, identify major pollutants, and understand their relationships.</p>
             </div>
         </section>
 
-        <section class="visualization-showcase">
+        <section class="visualizations">
             <div class="container">
-                <div class="viz-item">
-                    <h3>Real-Time Air Quality Index Visualization</h3>
-                    <div class="viz-container" id="aqi-visualization">
-                        <!-- D3.js visualization will be inserted here -->
-                        <p>Interactive AQI visualization showing pollution levels across different locations.</p>
-                        <div class="placeholder-viz">
-                            <img src="images/aqi-placeholder.jpg" alt="AQI Visualization Placeholder">
-                            <p class="caption">Interactive visualization coming soon. This will display real-time air quality data from the Real-Time AQI project.</p>
-                        </div>
-                    </div>
-                    <p>This visualization is part of my Real-Time Air Quality Index project, where I developed a system to collect, analyze, and visualize air quality data.</p>
-                    <a href="projects.html#real-time-aqi" class="btn">View Project Details</a>
+                <!-- Bar Plot Section -->
+                <div class="viz-section">
+                    <h3>1. Bar Plots: Top Polluted Cities and Pollutant Distribution by State</h3>
+                    <p>Bar plots were used to identify the top 10 most polluted cities and to see which states have the highest concentration of specific pollutants. The charts clearly show that industrial and metropolitan areas like Noida, Gurugram, and Delhi face severe air quality challenges. Furthermore, the analysis reveals that different pollutants are dominant in different states, indicating varied sources of pollution across the country.</p>
+                    <img src="https://github.com/user-attachments/assets/b8fcc929-623d-486c-a4e9-73a621d3c24f" alt="Bar plot of top 10 polluted cities">
+                    <img src="https://github.com/user-attachments/assets/a2fefe8a-3d6d-489a-9853-7c769d7a6ca7" alt="Bar plots of pollutants by state">
                 </div>
 
-                <div class="viz-item">
-                    <h3>Employee Attrition Analysis</h3>
-                    <div class="viz-container" id="attrition-visualization">
-                        <!-- D3.js visualization will be inserted here -->
-                        <p>Visualization showing factors contributing to employee attrition.</p>
-                        <div class="placeholder-viz">
-                            <img src="images/attrition-placeholder.jpg" alt="Attrition Visualization Placeholder">
-                            <p class="caption">Interactive visualization coming soon. This will display insights from the Employee Attrition Analysis project.</p>
-                        </div>
-                    </div>
-                    <p>Part of my Employee Attrition Analysis project, this visualization helps identify key factors affecting employee retention.</p>
-                    <a href="projects.html#employee-attrition" class="btn">View Project Details</a>
+                <!-- Cluster Bar Section -->
+                <div class="viz-section">
+                    <h3>2. Cluster Bar Chart: Pollutant Concentration in Top Cities</h3>
+                    <p>This cluster bar chart breaks down the contribution of each pollutant to the total pollution in the top 10 most polluted cities. It highlights that PM2.5 and PM10 are the most significant contributors to poor air quality in a majority of these urban centers.</p>
+                    <img src="https://github.com/user-attachments/assets/5ccf8a93-0d80-4f05-9f2e-0c72f9da1364" alt="Cluster bar chart of pollutant concentrations">
                 </div>
-            </div>
-        </section>
 
-        <section class="visualization-tools">
-            <div class="container">
-                <h2>Visualization Tools & Technologies</h2>
-                <div class="tools-grid">
-                    <div class="tool-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>D3.js</h3>
-                        <p>Creating interactive data visualizations for the web</p>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fab fa-python"></i>
-                        <h3>Matplotlib & Seaborn</h3>
-                        <p>Python libraries for static and interactive visualizations</p>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fas fa-table"></i>
-                        <h3>Tableau</h3>
-                        <p>Building interactive dashboards for business intelligence</p>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>Power BI</h3>
-                        <p>Creating business analytics visualizations</p>
-                    </div>
+                <!-- Box Plot Section -->
+                <div class="viz-section">
+                    <h3>3. Box Plot: National Pollutant Distribution</h3>
+                    <p>The box plot provides a statistical summary of the distribution for each major air pollutant across the country. PM10 and PM2.5 exhibit the widest spread and the most significant outliers, confirming they are primary drivers of severe air quality issues in specific regions. In contrast, SO₂ and NH₃ levels are relatively lower and more stable. The skewed distributions and numerous outliers for most pollutants suggest that acute pollution events in certain areas heavily impact the national average.</p>
+                    <img src="https://github.com/user-attachments/assets/bbf7d195-e5af-4979-a954-019eecadae94" alt="Box plot of all pollutants">
+                </div>
+                
+                <!-- Heatmap Section -->
+                <div class="viz-section">
+                    <h3>4. Heatmap: Correlation Between Pollutants</h3>
+                    <p>A heatmap was used to understand the relationships between different pollutants. The most striking observation is the strong positive correlation between PM10 and PM2.5, which is expected as PM2.5 is a subset of PM10. This strong relationship warrants a more detailed look via a scatter plot.</p>
+                    <img src="https://github.com/user-attachments/assets/8a9a7f9a-dcda-4a07-bda9-039552ea5fd5" alt="Correlation heatmap of pollutants">
+                </div>
+
+                <!-- Scatter Plot Section -->
+                <div class="viz-section">
+                    <h3>5. Scatter Plot: PM10 vs. PM2.5</h3>
+                    <p>This scatter plot confirms the direct proportionality between PM10 and PM2.5. Most data points form a dense diagonal cluster, indicating that as one increases, so does the other. The concentration of points in the bottom-left suggests that most locations have relatively low levels of both pollutants. Crucially, the absence of points in the bottom-right (high PM2.5, low PM10) aligns with the physical reality that PM2.5 particles are a component of PM10.</p>
+                    <img src="https://github.com/user-attachments/assets/968bfb74-f6e8-46dd-9c8d-bc248384fe6a" alt="Scatter plot of PM10 vs PM2.5">
                 </div>
             </div>
         </section>
@@ -96,22 +79,15 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="social-links">
+                 <div class="footer-social">
                     <a href="https://github.com/suhaspuli24123" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/Suhas Reddy Puli" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:suhaspuli@iisc.ac.in"><i class="fas fa-envelope"></i></a>
                 </div>
                 <p>&copy; 2025 Suhas Puli. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // D3.js visualization code would go here
-        // This is a placeholder for the future implementation
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Page loaded - D3 visualizations will be implemented here');
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
